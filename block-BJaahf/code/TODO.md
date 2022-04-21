@@ -10,8 +10,13 @@
 **You can use normal for loop for this function**
 
 ```js
-function loop() {
-  // Your code goes here
+function loop(startvalue) {
+   for(let i = 0; i < 3; i++){
+     function test(){
+       let currentValue = 0;
+     }
+     
+   }
 }
 
 loop(
