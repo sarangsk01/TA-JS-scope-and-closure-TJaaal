@@ -13,7 +13,7 @@ console.log(
   window.firstName,
   window.lastName,
   window.knownAs
-);
+);// undefined undefined 'no one'
 ```
 
 2. Guess the output:
@@ -27,7 +27,7 @@ function fullName(a, b) {
   return a + b;
 }
 
-console.log(window.fullName(firstName, lastName));
+console.log(window.fullName(firstName, lastName));// AryaStark
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
@@ -40,7 +40,7 @@ var one = addOne(0);
 var two = addOne(1);
 console.log(one, two);
 ```
-
+Use ![](./img/first.jpeg) to display it here.
 4. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
@@ -51,7 +51,7 @@ fucntion addOne(num){
 var two = addOne(1);
 console.log(one, two);
 ```
-
+Use ![](./img/second.jpeg) to display it here.
 5. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
@@ -62,7 +62,7 @@ fucntion addOne(num){
 var two = addOne(1);
 console.log(two);
 ```
-
+Use ![](./img/third.jpeg) to display it here.
 6. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
@@ -73,7 +73,7 @@ const addOne = (num) => {
 var two = addOne(1);
 console.log(two);
 ```
-
+Use ![](./img/fourth.jpeg) to display it here.
 7. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
@@ -84,7 +84,7 @@ const addOne = (num) => {
 var two = addOne(1);
 console.log(two);
 ```
-
+Use ![](./img/fifth.jpeg) to display it here.
 8. What will be the output of the following
 
 ```js
@@ -95,7 +95,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // undefined
 ```
 
 9. What will be the output of the following
@@ -108,7 +108,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // true
 ```
 
 10. What will be the output of the following
@@ -121,7 +121,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // undefined
 ```
 
 11. What will be the output of the following
@@ -135,7 +135,7 @@ function fullName(a, b) {
   return a + b;
 }
 const name = fullName(firstName, lastName);
-console.log(name);
+console.log(name);// AryaStark
 ```
 
 12. Guess the output of the code below with a reason.
@@ -146,7 +146,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);
+console.log(name); // Blank. reason - variable defined with let in declaration phase doesn't stored a value. 
 ```
 
 13. Guess the output of the code below with a reason.
@@ -155,7 +155,7 @@ console.log(name);
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name);
+console.log(name);// Arya Stark. reason - variable defined with var doesn't creates a function scope.
 ```
 
 14. Guess the output of the code below with a reason.
@@ -164,7 +164,7 @@ console.log(name);
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);
+console.log(name);//Blank. reason - variable defined with let in declaration phase doesn't stored a value.
 ```
 
 15. Guess the output of the code below with a reason.
@@ -173,7 +173,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i);// 20.reason - variable defined with let in declaration phase doesn't stored a value.
 ```
 
 16. Guess the output of the code below with a reason.
@@ -182,7 +182,7 @@ console.log(i);
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i);// Uncaught ReferenceError: i is not defined.reason - variable defined with let is only accessible in block it is not accessible outside this block.
 ```
 
 17. Guess the output and the reason behind that.
@@ -194,7 +194,7 @@ function sample() {
   }
   console.log(username);
 }
-sample();
+sample();//John Snow.reason - variable defined with var is accessible only inside the function. 
 ```
 
 18. Guess the output and the reason behind that.
@@ -206,7 +206,7 @@ function sample() {
   }
   console.log(username);
 }
-sample();
+sample();//Uncaught ReferenceError: username is not defined.reason - variable defined with let it only accessible in block quotes.
 ```
 
 19. Guess the output and the reason behind that.
@@ -220,7 +220,7 @@ function sample() {
   }
   console.log(username, 'second');
 }
-sample();
+sample();// John Snow.John Snow second.reason - username value is reassigned with other value therefore all those output are same.
 ```
 
 20. Guess the output and the reason behind that.
@@ -234,7 +234,7 @@ function sample() {
   }
   console.log(username, 'second');
 }
-sample();
+sample();//John Snow first.Arya Stark second.reason - variable defined in block quote is accessed in block.and the variable defined in function is accessible in function.
 ```
 
 21. Guess the output and the reason behind that.
@@ -247,7 +247,7 @@ function sample(...args) {
   }
 }
 
-sample('First', 'Second', 'Third');
+sample('First', 'Second', 'Third');//Hello I am First.Hello I am Second.Hello I am Third.reason - variable defined with let only accessible in this quotes.
 ```
 
 22. Guess the output and the reason behind that.
@@ -260,7 +260,7 @@ function sample(...args) {
   }
 }
 
-sample('First', 'Second', 'Third');
+sample('First', 'Second', 'Third');//Hello I am First.Hello I am Second.Hello I am Third.reason - variable defined with const only accessible in this quotes.
 ```
 
 23. Guess the output and the reason behind that.
@@ -273,7 +273,7 @@ if (true) {
   console.log(username, 'First');
   let username = 'Hello World!';
   myFunc();
-}
+} // Uncaught ReferenceError: Cannot access 'username' before initialization.reason - username defined with let doesn't stored a value in declaration phase.
 ```
 
 24. Guess the output and the reason behind that.
@@ -289,7 +289,7 @@ function outer() {
   inner();
 }
 
-outer();
+outer();//I love this movie called MAD MAX: FURY ROAD.reason - closure is created here.and inner function gets the value stored in variable.
 ```
 
 25. Guess the output and the reason behind that.
@@ -306,7 +306,7 @@ function outer() {
   inner();
 }
 
-outer();
+outer();//I love this movie called BEFORE SUNRISE.reason - variable defined in inner function stored a value and this value is executed.
 ```
 
 26. Guess the output and the reason behind that.
@@ -326,7 +326,7 @@ function outer() {
   }
   inner();
 }
-outer();
+outer();//I love this movie called GONE GIRL.reason - variable defined in extrainner function stored a value and this value is executed.
 ```
 
 30. Using reduce find the final value when the initial value passed is `100`. You have to pass the output of one function into the input of next function in the array `allFunctions` starts with `addOne` ends with `half`.
