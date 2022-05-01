@@ -88,7 +88,7 @@ function hello() {
   console.log('Hello World!');
 }
 
-hello.user = 'Sam'; // valid or invalid valid because it will add properties to the function.
+hello.user = "Sam"; // valid or invalid valid because it will add properties to the function.
 ```
 
 9. What is higher order function explain with an example.
